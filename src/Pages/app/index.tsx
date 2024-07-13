@@ -1,13 +1,7 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-
 
 const Home: React.FC = () => {
-  return (
-    <div>
-      <h1>TESTE</h1>
-    </div>
-  );
-}
+  return <h1>Home Page</h1>;
+};
 
 export default Home;
