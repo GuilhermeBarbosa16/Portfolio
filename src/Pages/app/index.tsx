@@ -21,22 +21,28 @@ const Home: React.FC = () => {
         <Box 
           sx={{ 
             mr: 3, 
-            width: 300, // Defina a largura do contêiner
-            height: 300, // Defina a altura do contêiner
-            borderRadius: '50%', 
-            overflow: 'hidden', // Garante que a imagem não saia do contêiner
+            width: 400, 
+            height: 400, 
+            overflow: 'hidden', 
             display: 'flex', 
             alignItems: 'center', 
-            justifyContent: 'center' 
+            justifyContent: 'center',
+            backgroundColor: 'orange',
+            transition: 'clip-path 1s', 
+            clipPath: 'circle(75%)',
+            borderRadius: '25px',
+            '&:hover': {
+              clipPath: 'circle(45%)'
+            }
           }}
         >
           <img
             src={Foto}
             alt="Guilherme Almeida Barbosa"
             style={{ 
-              width: '100%', // A imagem se ajusta ao tamanho do contêiner
-              height: '100%', // A imagem se ajusta ao tamanho do contêiner
-              objectFit: 'cover' // Mantém a proporção da imagem
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover'
             }}
           />
         </Box>
@@ -44,8 +50,8 @@ const Home: React.FC = () => {
           sx={{ 
             display: 'flex', 
             flexDirection: 'column', 
-            alignItems: 'center', // Centraliza horizontalmente
-            textAlign: 'center'   // Alinha o texto centralizado
+            alignItems: 'center', 
+            textAlign: 'center'
           }}
         >
           <Typography variant="h6">Olá, eu sou</Typography>
@@ -53,6 +59,7 @@ const Home: React.FC = () => {
           <Typography variant="subtitle1" sx={{ color: '#00ffcc', mb: 4 }}>
             <MaquinaDeEscrever text="Estudante de desenvolvimento Web" /> 
           </Typography>
+          <a href="/Download/Curriculo.pdf" download style={{ textDecoration: 'none' }}>
           <Button
             variant="outlined"
             color="inherit"
@@ -61,6 +68,7 @@ const Home: React.FC = () => {
           >
             Meu currículo
           </Button>
+          </a>
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
               <a href="https://github.com/GuilhermeBarbosa16" target="_blank" rel="noopener noreferrer">
