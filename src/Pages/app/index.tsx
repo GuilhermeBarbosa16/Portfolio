@@ -4,6 +4,9 @@ import { GitHub, LinkedIn, WhatsApp, Email } from '@mui/icons-material';
 import DownloadIcon from '@mui/icons-material/Download';
 import Foto from '../../assets/MinhaFoto.jpg';
 import MaquinaDeEscrever from '../../components/MaquinadeEscrever';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ReactDOM from 'react-dom';
+import App from '../../App';
 
 const Home: React.FC = () => {
   return (
@@ -59,7 +62,7 @@ const Home: React.FC = () => {
           <Typography variant="subtitle1" sx={{ color: '#00ffcc', mb: 4 }}>
             <MaquinaDeEscrever text="Estudante de desenvolvimento Web" /> 
           </Typography>
-          <a href="/Download/Curriculo.pdf" download style={{ textDecoration: 'none' }}>
+          <a href="https://drive.google.com/file/d/1q8DzV8luMlgFTUXdaNkbxsW52HikAVI8/view?usp=sharing" target="_blank" download style={{ textDecoration: 'none' }}>
           <Button
             variant="outlined"
             color="inherit"
