@@ -4,74 +4,80 @@ import { GitHub, LinkedIn, WhatsApp, Email } from '@mui/icons-material';
 import DownloadIcon from '@mui/icons-material/Download';
 import Foto from '../../assets/MinhaFoto.jpg';
 import MaquinaDeEscrever from '../../components/MaquinadeEscrever';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import ReactDOM from 'react-dom';
-import App from '../../App';
 
 const Home: React.FC = () => {
   return (
-    <Container 
-      maxWidth="lg" 
-      sx={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        height: '41rem', 
-        color: 'white'
+    <Container
+      maxWidth="lg"
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: { xs: 'column', md: 'row' }, // Ajuste para coluna em telas pequenas
+        height: 'auto',
+        color: 'white',
+        paddingTop: '20px', // Ajuste de padding para maior responsividade
       }}
     >
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Box 
-          sx={{ 
-            mr: 3, 
-            width: 400, 
-            height: 400, 
-            overflow: 'hidden', 
-            display: 'flex', 
-            alignItems: 'center', 
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', mb: { xs: 4, md: 0 } }}>
+        <Box
+          sx={{
+            width: { xs: '200px', md: '400px' }, // Ajuste do tamanho da imagem
+            height: { xs: '200px', md: '400px' },
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: 'orange',
-            transition: 'clip-path 1s', 
+            transition: 'clip-path 1s',
             clipPath: 'circle(75%)',
             borderRadius: '25px',
             '&:hover': {
-              clipPath: 'circle(45%)'
-            }
+              clipPath: 'circle(45%)',
+            },
           }}
         >
           <img
             src={Foto}
             alt="Guilherme Almeida Barbosa"
-            style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover'
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
             }}
           />
         </Box>
-        <Box 
-          sx={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            textAlign: 'center'
+
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+            mt: { xs: 3, md: 0 }, // Ajuste para margem em dispositivos móveis
           }}
         >
           <Typography variant="h6">Olá, eu sou</Typography>
           <Typography variant="h4" sx={{ fontWeight: 'bold' }}>Guilherme Almeida Barbosa</Typography>
           <Typography variant="subtitle1" sx={{ color: '#00ffcc', mb: 4 }}>
-            <MaquinaDeEscrever text="Estudante de desenvolvimento Web" /> 
+            <MaquinaDeEscrever text="Estudante de desenvolvimento Web" />
           </Typography>
-          <a href="https://drive.google.com/file/d/1q8DzV8luMlgFTUXdaNkbxsW52HikAVI8/view?usp=sharing" target="_blank" download style={{ textDecoration: 'none' }}>
-          <Button
-            variant="outlined"
-            color="inherit"
-            startIcon={<DownloadIcon />}
-            sx={{ borderColor: '#00ffcc', color: '#00ffcc', mb: 4 }}
+          <a
+            href="https://drive.google.com/file/d/1q8DzV8luMlgFTUXdaNkbxsW52HikAVI8/view?usp=sharing"
+            target="_blank"
+            download
+            style={{ textDecoration: 'none' }}
           >
-            Meu currículo
-          </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              startIcon={<DownloadIcon />}
+              sx={{ borderColor: '#00ffcc', color: '#00ffcc', mb: 4 }}
+            >
+              Meu currículo
+            </Button>
           </a>
+
           <Grid container spacing={2} justifyContent="center">
             <Grid item>
               <a href="https://github.com/GuilhermeBarbosa16" target="_blank" rel="noopener noreferrer">
