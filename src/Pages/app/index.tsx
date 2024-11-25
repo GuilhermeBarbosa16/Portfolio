@@ -13,16 +13,16 @@ const Home: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: { xs: 'column', md: 'row' }, // Ajuste para coluna em telas pequenas
+        flexDirection: { xs: 'column', md: 'row' }, 
         height: 'auto',
         color: 'white',
-        paddingTop: '20px', // Ajuste de padding para maior responsividade
+        paddingTop: '20px', 
       }}
     >
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', mb: { xs: 4, md: 0 } }}>
         <Box
           sx={{
-            width: { xs: '200px', md: '400px' }, // Ajuste do tamanho da imagem
+            width: { xs: '200px', md: '400px' }, 
             height: { xs: '200px', md: '400px' },
             overflow: 'hidden',
             display: 'flex',
@@ -54,11 +54,11 @@ const Home: React.FC = () => {
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            mt: { xs: 3, md: 0 }, // Ajuste para margem em dispositivos móveis
+            mt: { xs: 3, md: 0 }, 
           }}
         >
           <Typography variant="h6">Olá, eu sou</Typography>
-          <Typography variant="h4" sx={{ fontWeight: 'bold' }}>Guilherme Almeida Barbosa</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 'bold', paddingLeft: '5px', }}>Guilherme Almeida Barbosa</Typography>
           <Typography variant="subtitle1" sx={{ color: '#00ffcc', mb: 4 }}>
             <MaquinaDeEscrever text="Estudante de desenvolvimento Web" />
           </Typography>
