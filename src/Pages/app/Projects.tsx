@@ -119,11 +119,8 @@ const Projects = () => {
         }}
       >
         <Typography variant="body1">
-          FinWise é uma solução de gestão financeira personalizada que visa
-          proporcionar aos usuários uma experiência intuitiva e eficaz.
-        </Typography>
-        <Typography variant="body2" sx={{ marginTop: "0.5rem" }}>
-          Desenvolvido com React e Firebase para garantir escalabilidade.
+        FinWise é uma plataforma de gestão financeira projetada para simplificar o controle de receitas e despesas. Desenvolvida com React, a aplicação oferece uma interface dinâmica e responsiva. O armazenamento de dados é gerenciado pelo Firebase Firestore, um banco de dados NoSQL em tempo real, que garante alta performance e sincronização eficiente. O Firebase também é utilizado para autenticação segura e hospedagem, proporcionando escalabilidade e confiabilidade. O foco está em combinar tecnologia 
+        moderna e uma experiência de usuário otimizada para atender às necessidades de organização financeira.
         </Typography>
       </Box>
     </Collapse>

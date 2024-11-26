@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         flexDirection: { xs: 'column', md: 'row' }, 
         height: 'auto',
         color: 'white',
-        paddingTop: '20px', 
+        paddingTop: '100px', 
       }}
     >
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', mb: { xs: 4, md: 0 } }}>
