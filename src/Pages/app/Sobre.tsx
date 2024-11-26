@@ -53,7 +53,7 @@ const Home: React.FC = () => {
             title: 'Estagiário de help desk na Controladoria Geral do Estado',
             date: 'Jul de 2023 - Abr de 2024',
             description:
-              'Durante esse período fui responsável pelo suporte necessário à infraestrutura de rede e servidores públicos, assistência no desenvolvimento de sites e manutenção de sistemas utilizando Joomla.',
+              'Durante esse período fui responsável pelo suporte necessário à infraestrutura de rede e para os servidores públicos, assistência no desenvolvimento de sites e manutenção de sistemas utilizando Joomla.',
           },
           {
             panel: 'panel2',
@@ -128,10 +128,11 @@ const Home: React.FC = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  padding: '10px',      
+                  padding: '5px',      
                   transition: 'transform 0.3s, border-color 0.3s',
                   '&:hover': {
-                    transform: 'scale(1.1)',
+                    transform: 'scale(1.05)',
+                    
                   },
                 }}
               >
