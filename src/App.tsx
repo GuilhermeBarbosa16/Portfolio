@@ -2,8 +2,8 @@ import { BrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import { router } from './Router';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React, { useEffect } from 'react';
 
-// Crie o tema com a fonte "Nanum Myeongjo"
 const theme = createTheme({
   typography: {
     fontFamily: `'Nanum Myeongjo', serif`,
@@ -11,6 +11,12 @@ const theme = createTheme({
 });
 
 function App() {
+  useEffect(() => {
+    if (window.performance.navigation.type === 1) {    
+      window.location.href = "/Portfolio";
+    }
+  }, []); 
+
   return (
     <ThemeProvider theme={theme}>
       <RouterProvider router={router} />
