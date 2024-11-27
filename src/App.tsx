@@ -1,8 +1,8 @@
-import { BrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css';
-import { router } from './Router';
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React, { useEffect } from 'react';
+import { router } from './Router';
+import './App.css';
 
 const theme = createTheme({
   typography: {
@@ -12,10 +12,10 @@ const theme = createTheme({
 
 function App() {
   useEffect(() => {
-    if (window.performance.navigation.type === 1) {    
-      window.location.href = "/Portfolio";
+    if (window.location.pathname !== '/Portfolio') {
+      window.location.href = '/Portfolio'; // Redireciona para "/Portfolio"
     }
-  }, []); 
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
