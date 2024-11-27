@@ -113,14 +113,14 @@ const Home: React.FC = () => {
       </Box>
 
       {/* Seção da direita: Habilidades */}
-      <Box sx={{ width: { xs: '100%', md: '38%' } }}>
+      <Box sx={{ width: { xs: '100%', md: '38%' }, paddingLeft : '1.5rem' }}>
         <Typography variant="h4" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '20px' }}>
           Software's <br />
           <span style={{ color: '#03DAC6' }}>&</span>
           <br />
           Conhecimentos
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={3} sx={{ paddingBottom: '20px' }}>
           {skills.map((skill, index) => (
             <Grid item xs={4} key={index}>
               <Box
