@@ -11,9 +11,9 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx">
-    if (location.pathname !== '/Portfolio/') {
-      const redirect = location.pathname.replace('/Portfolio/', '/');
-      location.replace('/Portfolio/' + redirect);
+ if (!location.pathname.startsWith('/Portfolio/')) {
+    const redirect = '/Portfolio' + location.pathname;
+    location.replace(redirect);
     }
 
   </script>
