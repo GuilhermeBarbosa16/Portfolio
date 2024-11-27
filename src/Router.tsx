@@ -6,24 +6,21 @@ import Home from './Pages/app/';
 import Sobre from './Pages/app/Sobre';
 import Projects from './Pages/app/Projects';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Header />,
+      children: [
+        { path: '/', element: <Home /> },
+        { path: 'Sobre', element: <Sobre /> },
+        { path: 'Projects', element: <Projects /> },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <Header />,
-    children:[ {path: "/", element: <Home /> } ]
-  },
-  {
-    path: '/',
-    element: <Header />,
-    children:[ {path: "/Sobre", element: <Sobre /> } ]
-  },
-  {
-    path: '/',
-    element: <Header />,
-    children:[ {path: "/Projects", element: <Projects /> } ]
-  },
-
-])
-
+    basename: '/Portfolio', // Adicione o basename (nome do repositório no GitHub)
+  }
+);
 
 export { router };
