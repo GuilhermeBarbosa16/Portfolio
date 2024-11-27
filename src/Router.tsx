@@ -12,14 +12,14 @@ const router = createBrowserRouter(
       path: '/',
       element: <Header />,
       children: [
-        { path: '/', element: <Home /> },
+        { path: '/', element: <Home /> },  // Página inicial
         { path: 'Sobre', element: <Sobre /> },
         { path: 'Projects', element: <Projects /> },
       ],
     },
   ],
   {
-    basename: '/Portfolio', // Adicione o basename (nome do repositório no GitHub)
+    basename: '/Portfolio',
   }
 );
 
