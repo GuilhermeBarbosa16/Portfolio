@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Box, Typography, Grid, Collapse } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { FaHtml5, FaCss3Alt, FaJs, FaLaravel, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaLaravel, FaReact, FaNodeJs, FaPhp } from 'react-icons/fa';
 import { SiFigma, SiXampp } from 'react-icons/si';
 
 const Home: React.FC = () => {
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     { icon: <FaLaravel style={{ fontSize: 40, color: '#FF2D20' }} />, label: 'Laravel', percentage: 30 },
     { icon: <FaReact style={{ fontSize: 40, color: '#61DAFB' }} />, label: 'React', percentage: 45 },
     { icon: <FaNodeJs style={{ fontSize: 40, color: '#68A063' }} />, label: 'Node.js', percentage: 35 },
-    { icon: <FaGitAlt style={{ fontSize: 40, color: '#F1502F' }} />, label: 'Git', percentage: 75 },
+    { icon: <FaPhp style={{ fontSize: 40, color: '#777BB4' }} />, label: 'PHP', percentage: 40 },  
     { icon: <SiFigma style={{ fontSize: 40, color: '#F24E1E' }} />, label: 'Figma', percentage: 80 },
     { icon: <SiXampp style={{ fontSize: 40, color: '#FB7A24' }} />, label: 'XAMPP', percentage: 100 },
   ];
