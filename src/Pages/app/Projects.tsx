@@ -69,7 +69,7 @@ const Projects = () => {
                 }}
               >
                 <img
-                  src="/Portfolio/Logo-Finwese.svg"
+                  src="/Logo-Finwese.svg"
                   alt="Logo FinWise"
                   style={{
                     width: "100%",
