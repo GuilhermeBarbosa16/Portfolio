@@ -9,14 +9,24 @@ import {
   IconButton,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkIcon from "@mui/icons-material/Link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const Projects = () => {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState<{
+    FinWise: boolean;
+    Calculadora: boolean;
+  }>({
+    FinWise: false,
+    Calculadora: false,
+  });
 
-  const handleToggleDetails = () => {
-    setShowDetails(!showDetails);
+  const handleToggleDetails = (project: "FinWise" | "Calculadora") => {
+    setShowDetails((prevState) => ({
+      ...prevState,
+      [project]: !prevState[project],
+    }));
   };
 
   return (
@@ -50,42 +60,40 @@ const Projects = () => {
             }}
             elevation={1}
           >
-            <Box
-              sx={{
+            <img
+              src="/Portfolio/Logo-Finwese.svg"
+              alt="Logo FinWise"
+              style={{
                 width: "100%",
                 height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                objectFit: "cover",
               }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  src="/Portfolio/Logo-Finwese.svg"
-                  alt="Logo FinWise"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </Box>
-            </Box>
+            />
           </Card>
 
-          {/* Ícone do GitHub */}
+          {/* Tecnologias usadas */}
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
+              marginTop: "0.5rem",
+              gap: 2,
+            }}
+          >
+            <Typography variant="body2" sx={{ color: "#61DAFB" }}>
+              React
+            </Typography>
+            <Typography variant="body2" sx={{ color: "#FFCA28" }}>
+              Firebase
+            </Typography>
+          </Box>
+
+          {/* Links do GitHub e site */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
               marginTop: "0.5rem",
             }}
           >
@@ -95,8 +103,6 @@ const Projects = () => {
               rel="noopener"
               sx={{
                 color: "#fff",
-                textDecoration: "none",
-                transition: "color 0.3s ease",
                 "&:hover": { color: "#00CFFF" },
               }}
             >
@@ -105,20 +111,16 @@ const Projects = () => {
           </Box>
 
           {/* Botão para detalhes */}
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "0.25rem",
-            }}
-          >
-            <IconButton onClick={handleToggleDetails} sx={{ color: "#fff" }}>
-              {showDetails ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <IconButton
+              onClick={() => handleToggleDetails("FinWise")}
+              sx={{ color: "#fff" }}
+            >
+              {showDetails.FinWise ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
             </IconButton>
           </Box>
 
-          {/* Detalhes do projeto */}
-          <Collapse in={showDetails}>
+          <Collapse in={showDetails.FinWise}>
             <Box
               sx={{
                 marginTop: "0.5rem",
@@ -132,7 +134,7 @@ const Projects = () => {
               <Typography variant="body1">
                 FinWise é uma plataforma de gestão financeira projetada para
                 simplificar o controle de receitas e despesas. Desenvolvida com
-                React, a aplicação oferece uma interface dinâmica e responsiva.
+                React. A aplicação oferece uma interface dinâmica e responsiva.
                 O armazenamento de dados é gerenciado pelo Firebase Firestore, um
                 banco de dados NoSQL em tempo real, que garante alta performance
                 e sincronização eficiente. O Firebase também é utilizado para
@@ -143,21 +145,121 @@ const Projects = () => {
           </Collapse>
         </Grid>
 
-        {/* Outros Projetos */}
-        {[1, 2].map((_, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              sx={{
-                maxWidth: 330,
-                height: 200,
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                borderRadius: "16px",
-                margin: "0 auto",
-                overflow: "hidden",
+        {/* Projeto Calculadora Trabalhista */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card
+            sx={{
+              maxWidth: 330,
+              height: 200,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "8px",
+              backgroundColor: "rgb(214, 214, 214)", // Fundo para contraste
+            }}
+            elevation={1}
+          >
+            <img
+              src="/Portfolio/Logo-Calculadora.svg"
+              alt="Logo Calculadora Trabalhista"
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "contain",
               }}
-            ></Card>
-          </Grid>
-        ))}
+            />
+          </Card>
+
+          {/* Tecnologias usadas */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "0.5rem",
+              gap: 2,
+            }}
+          >
+            <Typography variant="body2" sx={{ color: "#61DAFB" }}>
+              React
+            </Typography>
+          </Box>
+
+          {/* Links do GitHub e site */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 2,
+              marginTop: "0.5rem",
+            }}
+          >
+            <Link
+              href="https://github.com/GuilhermeBarbosa16/Calculos"
+              target="_blank"
+              rel="noopener"
+              sx={{
+                color: "#fff",
+                "&:hover": { color: "#00CFFF" },
+              }}
+            >
+              <GitHubIcon fontSize="large" />
+            </Link>
+            <Link
+              href="https://calculos-rose.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              sx={{
+                color: "#fff",
+                "&:hover": { color: "#00CFFF" },
+              }}
+            >
+              <LinkIcon fontSize="large" />
+            </Link>
+          </Box>
+
+          {/* Botão para detalhes */}
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <IconButton
+              onClick={() => handleToggleDetails("Calculadora")}
+              sx={{ color: "#fff" }}
+            >
+              {showDetails.Calculadora ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            </IconButton>
+          </Box>
+
+          <Collapse in={showDetails.Calculadora}>
+            <Box
+              sx={{
+                marginTop: "0.5rem",
+                padding: "0.75rem",
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
+                borderRadius: "8px",
+                color: "#fff",
+                textAlign: "center",
+              }}
+            >
+              <Typography variant="body1">
+                Calculadora Trabalhista é uma aplicação React que auxilia no cálculo de
+                valores trabalhistas, com foco na precisão e simplicidade.
+              </Typography>
+            </Box>
+          </Collapse>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card
+            sx={{
+              maxWidth: 330,
+              height: 200,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              borderRadius: "16px",
+              margin: "0 auto",
+              overflow: "hidden",
+            }}
+          ></Card>
+        </Grid>
+
       </Grid>
     </Box>
   );
