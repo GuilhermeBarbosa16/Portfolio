@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           <Typography variant="h6">Olá, eu sou</Typography>
           <Typography variant="h4" sx={{ fontWeight: 'bold', paddingLeft: '5px', }}>Guilherme Almeida Barbosa</Typography>
           <Typography variant="subtitle1" sx={{ color: '#00ffcc', mb: 4 }}>
-            <MaquinaDeEscrever text="Estudante de desenvolvimento Web" />
+            <MaquinaDeEscrever text="Desenvolvedor Web Junior | Front-end" />
           </Typography>
           <a
             href="https://drive.google.com/file/d/1q8DzV8luMlgFTUXdaNkbxsW52HikAVI8/view?usp=sharing"
