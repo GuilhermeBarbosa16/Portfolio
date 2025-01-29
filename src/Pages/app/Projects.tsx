@@ -14,39 +14,28 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const Projects = () => {
-  const [showDetails, setShowDetails] = useState<{
-    FinWise: boolean;
-    Calculadora: boolean;
-  }>({
+  const [showDetails, setShowDetails] = useState({
     FinWise: false,
     Calculadora: false,
+    ArtStar: false,
   });
 
-  const handleToggleDetails = (project: "FinWise" | "Calculadora") => {
+  const handleToggleDetails = (project: "FinWise" | "Calculadora" | "ArtStar") => {
     setShowDetails((prevState) => ({
       ...prevState,
       [project]: !prevState[project],
     }));
   };
-
+  
   return (
-    <Box
-      sx={{
-        padding: "2rem",
-        color: "#fff",
-      }}
-    >
-      <Typography
-        variant="h4"
-        align="center"
-        sx={{ marginBottom: "2rem", fontWeight: "bold" }}
-      >
+    <Box sx={{ padding: "2rem", color: "#fff" }}>
+      <Typography variant="h4" align="center" sx={{ marginBottom: "2rem", fontWeight: "bold" }}>
         Meus Projetos
       </Typography>
 
       <Grid container spacing={2} justifyContent="center">
-        {/* Projeto FinWise */}
-        <Grid item xs={12} sm={6} md={4}>
+ {/* Projeto FinWise */}
+ <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -144,9 +133,79 @@ const Projects = () => {
             </Box>
           </Collapse>
         </Grid>
+         {/* Projeto Art-Star */}
+         <Grid item xs={12} sm={6} md={4}>
+          <Card
+            sx={{
+              maxWidth: 330,
+              height: 200,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "8px",
+              backgroundColor: "rgb(214, 214, 214)",
+            }}
+            elevation={1}
+          >
+            <img
+              src="/Portfolio/Logo-ArtStar.svg"
+              alt="Logo Art-Star"
+              style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            />
+          </Card>
 
-        {/* Projeto Calculadora Trabalhista */}
-        <Grid item xs={12} sm={6} md={4}>
+          <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0.5rem", gap: 2 }}>
+            <Typography variant="body2" sx={{ color: "#61DAFB" }}>React</Typography>
+          </Box>
+
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, marginTop: "0.5rem" }}>
+            <Link
+              href="https://github.com/GuilhermeBarbosa16/Art-Star"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
+            >
+              <GitHubIcon fontSize="large" />
+            </Link>
+            <Link
+              href="https://art-star-guilherme-s-projects-38675229.vercel.app/"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
+            >
+              <LinkIcon fontSize="large" />
+            </Link>
+          </Box>
+
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <IconButton onClick={() => handleToggleDetails("ArtStar")} sx={{ color: "#fff" }}>
+              {showDetails.ArtStar ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            </IconButton>
+          </Box>
+
+          <Collapse in={showDetails.ArtStar}>
+            <Box
+              sx={{
+                marginTop: "0.5rem",
+                padding: "0.75rem",
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
+                borderRadius: "8px",
+                color: "#fff",
+                textAlign: "center",
+              }}
+            >
+              <Typography variant="body1">
+                Art-Star é uma landing page para uma marcenaria, desenvolvida com React.
+                O site apresenta os serviços e produtos da empresa com um design moderno e responsivo.
+              </Typography>
+            </Box>
+          </Collapse>
+        </Grid>
+
+  {/* Projeto Calculadora Trabalhista */}
+  <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -218,9 +277,8 @@ const Projects = () => {
               <LinkIcon fontSize="large" />
             </Link>
           </Box>
-
-          {/* Botão para detalhes */}
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    {/* Botão para detalhes */}
+                    <Box sx={{ display: "flex", justifyContent: "center" }}>
             <IconButton
               onClick={() => handleToggleDetails("Calculadora")}
               sx={{ color: "#fff" }}
