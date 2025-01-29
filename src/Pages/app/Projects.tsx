@@ -26,7 +26,7 @@ const Projects = () => {
       [project]: !prevState[project],
     }));
   };
-  
+
   return (
     <Box sx={{ padding: "2rem", color: "#fff" }}>
       <Typography variant="h4" align="center" sx={{ marginBottom: "2rem", fontWeight: "bold" }}>
@@ -34,8 +34,8 @@ const Projects = () => {
       </Typography>
 
       <Grid container spacing={2} justifyContent="center">
- {/* Projeto FinWise */}
- <Grid item xs={12} sm={6} md={4}>
+        {/* Projeto FinWise */}
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -133,8 +133,8 @@ const Projects = () => {
             </Box>
           </Collapse>
         </Grid>
-         {/* Projeto Art-Star */}
-         <Grid item xs={12} sm={6} md={4}>
+        {/* Projeto Art-Star */}
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -150,7 +150,7 @@ const Projects = () => {
             elevation={1}
           >
             <img
-              src="/Portfolio/Logo-ArtStar.svg"
+              src={`https://api.screenshotmachine.com?key=1b49fa&url=https://art-star-guilherme-s-projects-38675229.vercel.app/&dimension=1024x768`}
               alt="Logo Art-Star"
               style={{ width: "100%", height: "auto", objectFit: "contain" }}
             />
@@ -197,15 +197,15 @@ const Projects = () => {
               }}
             >
               <Typography variant="body1">
-                Art-Star é uma landing page para uma marcenaria, desenvolvida com React.
+                Art-Star é uma marcenaria, desenvolvi uma landing page com React.
                 O site apresenta os serviços e produtos da empresa com um design moderno e responsivo.
               </Typography>
             </Box>
           </Collapse>
         </Grid>
 
-  {/* Projeto Calculadora Trabalhista */}
-  <Grid item xs={12} sm={6} md={4}>
+        {/* Projeto Calculadora Trabalhista */}
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -277,8 +277,8 @@ const Projects = () => {
               <LinkIcon fontSize="large" />
             </Link>
           </Box>
-                    {/* Botão para detalhes */}
-                    <Box sx={{ display: "flex", justifyContent: "center" }}>
+          {/* Botão para detalhes */}
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
             <IconButton
               onClick={() => handleToggleDetails("Calculadora")}
               sx={{ color: "#fff" }}
