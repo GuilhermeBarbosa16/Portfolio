@@ -220,15 +220,12 @@ const Projects = () => {
             }}
             elevation={1}
           >
-            <img
-              src="/Portfolio/Logo-Calculadora.svg"
-              alt="Logo Calculadora Trabalhista"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-              }}
-            />
+           <img
+  src={`https://api.screenshotmachine.com?key=1b49fa&url=https://calculos-rose.vercel.app/&dimension=1920x1080`}
+  alt="Logo Calculadora Trabalhista"
+  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+/>
+
           </Card>
 
           {/* Tecnologias usadas */}
