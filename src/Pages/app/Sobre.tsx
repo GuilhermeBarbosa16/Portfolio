@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     { icon: <FaNodeJs style={{ fontSize: 40, color: '#68A063' }} />, label: 'Node.js', percentage: 35 },
     { icon: <FaGitAlt style={{ fontSize: 40, color: '#F1502F' }} />, label: 'Git', percentage: 75 },
     { icon: <SiFigma style={{ fontSize: 40, color: '#F24E1E' }} />, label: 'Figma', percentage: 80 },
-    { icon: <FaPhp style={{ fontSize: 40, color: '#777BB4' }} />, label: 'PHP', percentage: 75 },
+    { icon: <FaPhp style={{ fontSize: 40, color: '#777BB4' }} />, label: 'PHP', percentage: 40 },
   ];
 
   const experiences = [
