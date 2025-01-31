@@ -162,7 +162,7 @@ const Projects = () => {
 
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2, marginTop: "0.5rem" }}>
             <Link
-              href="https://github.com/GuilhermeBarbosa16/Art-Star"
+              href="https://artstarmovelaria.com"
               target="_blank"
               rel="noopener"
               sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
