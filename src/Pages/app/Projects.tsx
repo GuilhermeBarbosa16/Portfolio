@@ -162,7 +162,7 @@ const Projects = () => {
 
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2, marginTop: "0.5rem" }}>
             <Link
-              href="https://artstarmovelaria.com"
+              href="https://github.com/GuilhermeBarbosa16/Art-Star"
               target="_blank"
               rel="noopener"
               sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
@@ -170,7 +170,7 @@ const Projects = () => {
               <GitHubIcon fontSize="large" />
             </Link>
             <Link
-              href="https://art-star-guilherme-s-projects-38675229.vercel.app/"
+              href="https://artstarmovelaria.com"
               target="_blank"
               rel="noopener"
               sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
