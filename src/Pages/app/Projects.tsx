@@ -378,7 +378,7 @@ const Projects = () => {
 
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2, marginTop: "0.5rem" }}>
             <Link
-              href="https://github.com/GuilhermeBarbosa16/Lauout-3"
+              href="https://github.com/GuilhermeBarbosa16/Layout-3"
               target="_blank"
               rel="noopener"
               sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
