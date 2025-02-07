@@ -7,7 +7,7 @@
 
 }
 body{
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: linear-gradient(45deg, #535557, #2c2e3e, #464e5f, #6c737e);
   background-size: 200% 200%;
