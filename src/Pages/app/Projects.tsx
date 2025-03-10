@@ -175,7 +175,7 @@ const Projects = () => {
               <GitHubIcon fontSize="large" />
             </Link>
             <Link
-              href="https://artstarmovelaria.com.br"
+              href="https://artsatarmovelaria.com.br/"
               target="_blank"
               rel="noopener"
               sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
