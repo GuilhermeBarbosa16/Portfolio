@@ -63,7 +63,7 @@ const Home: React.FC = () => {
             <MaquinaDeEscrever text="Desenvolvedor Web Junior | Front-end" />
           </Typography>
           <a
-            href="https://drive.google.com/file/d/16aS_oRSVuf9udcFq0Z7OD82MlgLR-cIr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1LGZWB_JZZWvtaDSeAcku6VTuzfGXniJD/view?usp=sharing"
             target="_blank"
             download
             style={{ textDecoration: 'none' }}
