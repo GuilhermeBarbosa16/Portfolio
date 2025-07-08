@@ -5,6 +5,7 @@ import Header from './Pages/layout/Header';
 import Home from './Pages/app/';
 import Sobre from './Pages/app/Sobre';
 import Projects from './Pages/app/Projects';
+import Certificacao from './Pages/app/certificação';
 
 const router = createBrowserRouter(
   [
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
         { path: '/', element: <Home /> },  
         { path: 'Sobre', element: <Sobre /> },
         { path: 'Projects', element: <Projects /> },
+        { path: 'Certificados', element: <Certificacao /> },
       ],
     },
   ],

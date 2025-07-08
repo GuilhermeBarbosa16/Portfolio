@@ -18,6 +18,7 @@ const Projects = () => {
     FinWise: false,
     Calculadora: false,
     ArtStar: false,
+    Altus: false,
     Layout1: false,
     Layout2: false,
     Layout3: false,
@@ -25,7 +26,7 @@ const Projects = () => {
     LayoutSalao: false,
   });
 
-  const handleToggleDetails = (project: "FinWise" | "Calculadora" | "ArtStar" | "Layout1" | "Layout2" | "Layout3" | "LayoutClinica" | "LayoutSalao") => {
+  const handleToggleDetails = (project: "FinWise" | "Calculadora" | "ArtStar" | "Altus" | "Layout1" | "Layout2" | "Layout3" | "LayoutClinica" | "LayoutSalao") => {
     setShowDetails((prevState) => ({
       ...prevState,
       [project]: !prevState[project],
@@ -203,6 +204,75 @@ const Projects = () => {
             >
               <Typography variant="body1">
                 Art-Star é uma marcenaria, desenvolvi uma landing page com React.
+                O site apresenta os serviços e produtos da empresa com um design moderno e responsivo.
+              </Typography>
+            </Box>
+          </Collapse>
+        </Grid>
+        {/* Projeto Altus */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card
+            sx={{
+              maxWidth: 330,
+              height: 200,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "8px",
+              backgroundColor: "rgb(214, 214, 214)",
+            }}
+            elevation={1}
+          >
+            <img
+              src={`https://api.screenshotmachine.com?key=1b49fa&url=https://altus-construtora.vercel.app/&dimension=1024x768`}
+              alt="Logo Altus"
+              style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            />
+          </Card>
+
+          <Box sx={{ display: "flex", justifyContent: "center", marginTop: "0.5rem", gap: 2 }}>
+            <Typography variant="body2" sx={{ color: "#61DAFB" }}>React</Typography>
+          </Box>
+
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, marginTop: "0.5rem" }}>
+            <Link
+              href="https://github.com/GuilhermeBarbosa16/Altus-Construtora.git"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
+            >
+              <GitHubIcon fontSize="large" />
+            </Link>
+            <Link
+              href="https://altusengenhariabh.com.br/"
+              target="_blank"
+              rel="noopener"
+              sx={{ color: "#fff", "&:hover": { color: "#00CFFF" } }}
+            >
+              <LinkIcon fontSize="large" />
+            </Link>
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <IconButton onClick={() => handleToggleDetails("Altus")} sx={{ color: "#fff" }}>
+              {showDetails.Altus ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+            </IconButton>
+          </Box>
+
+          <Collapse in={showDetails.Altus}>
+            <Box
+              sx={{
+                marginTop: "0.5rem",
+                padding: "0.75rem",
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
+                borderRadius: "8px",
+                color: "#fff",
+                textAlign: "center",
+              }}
+            >
+              <Typography variant="body1">
+                Altus é uma construtora, desenvolvi uma landing page com React.
                 O site apresenta os serviços e produtos da empresa com um design moderno e responsivo.
               </Typography>
             </Box>
@@ -419,8 +489,8 @@ const Projects = () => {
           </Collapse>
         </Grid>
 
-  {/* Layout frela-Clinica*/}
-  <Grid item xs={12} sm={6} md={4}>
+        {/* Layout frela-Clinica*/}
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
@@ -489,9 +559,9 @@ const Projects = () => {
           </Collapse>
         </Grid>
 
-      
-  {/* Layout frela-Clinica*/}
-  <Grid item xs={12} sm={6} md={4}>
+
+        {/* Layout frela-Clinica*/}
+        <Grid item xs={12} sm={6} md={4}>
           <Card
             sx={{
               maxWidth: 330,
